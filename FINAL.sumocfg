@@ -1,0 +1,7 @@
+<configuration>
+    <input>
+       <net-file value="FINAL.net.xml"/>
+       <route-files value="FINAL.rou.xml"/>
+    </input>
+	<additional-files value="FINAL.add.xml"/>
+</configuration>

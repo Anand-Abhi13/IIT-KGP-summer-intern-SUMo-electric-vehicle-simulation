@@ -1,0 +1,26 @@
+<routes>
+    <vType accel="4.0" decel="5.0" id="Car" length="7.0" maxSpeed="100.0" sigma="1.0" />
+    <route id="route0" edges="-D gneE14 gneE15 B -gneE7 -gneE6 gneE17 -gneE18 -gneE19 -C -D gneE14 gneE15 B -gneE7 -gneE6 gneE17 -gneE18 -gneE19 -C -D gneE14 gneE15 B -gneE7 -gneE6 gneE17 -gneE18 -gneE19 -C"/>
+    <vehicle depart="50400" id="veh0" route="route0" type="Car" />
+    <vType id="taxi" type="passenger" length="5" accel="3.5" decel="2.2" sigma="1.0"/>
+    <flow id="carflow" type="taxi" beg="50401" end="50501" number="10" from="Z" to="A"/>
+	<vType id="ElectriCar" accel="5.0" decel="5.0" lenght="12.0" maxSpeed="100.0" sigma="1.0" minGap="2.5" color="1,1,1">
+      <param key="maximumBatteryCapacity" value="2000"/>
+      <param key="maximumPower" value="1000"/>
+      <param key="vehicleMass" value="10000"/>
+      <param key="frontSurfaceArea" value="5"/>
+      <param key="airDragCoefficient" value="0.6"/>
+      <param key="internalMomentOfInertia" value="0.01"/>
+      <param key="radialDragCoefficient" value="0.5"/>
+      <param key="rollDragCoefficient" value="0.01"/>
+      <param key="constantPowerIntake" value="100"/>
+      <param key="propulsionEfficiency" value="0.9"/>
+      <param key="recuperationEfficiency" value="0.9"/>
+      <param key="stoppingTreshold" value="0.1"/>
+   </vType>
+   <route id="route1" edges="D C gneE19 gneE18 -gneE17 gneE6 gneE7 -B -gneE15 -gneE14 D C gneE19 gneE18 -gneE17 gneE6 gneE7 -B -gneE15 -gneE14 D C gneE19 gneE18 -gneE17 gneE6 gneE7 -B -gneE15 -gneE14"/>
+     <vehicle id="Elec" type="ElectriCar" depart="50400" route ="route1" color="1,0,0">
+      <param key="actualBatteryCapacity" value="1500"/>
+     </vehicle>
+    
+</routes>
